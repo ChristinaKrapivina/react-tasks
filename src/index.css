@@ -11,3 +11,36 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+html {
+  font-size: 18px;
+}
+*:focus {
+  outline: none;
+}
+
+/*Page transition*/
+.page-enter,
+.page-exit {
+  height: 100vh;
+  transition: transform 1000ms ease-out;
+}
+
+.page-enter {
+  transform: translateX(100%);
+}
+
+.page-enter.page-enter-active {
+  transform: translateX(0%);
+}
+
+.page-exit {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transform: translateX(0%);
+}
+
+.page-exit-active {
+  transform: translateX(-100%);
+}
