@@ -2,7 +2,7 @@ import React from 'react';
 // Components
 import { ModalComponent as Modal } from './modal/modal';
 // Styles
-import { Lecture1Container, Button } from './lecture1.styled';
+import { Lecture1Container, OpenButton } from './lecture1.styled';
 
 class Lecture1Component extends React.Component {
   constructor(props) {
@@ -31,7 +31,7 @@ class Lecture1Component extends React.Component {
     const { isModalOpened, data } = this.state;
     return (
       <Lecture1Container>
-        <Button onClick={this.handleModalOpen}>Open Comments</Button>
+        <OpenButton onClick={this.handleModalOpen}>Open Comments</OpenButton>
         { isModalOpened && <Modal data={data} onClose={this.handleModalClose} /> }
       </Lecture1Container>
     )

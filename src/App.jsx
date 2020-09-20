@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route, Switch, withRouter } from "react-router-dom";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 // Components
-import { Home, Lecture1 } from "./components";
+import { Home, Lecture1, Lecture2 } from "./components";
 // Styles
 import { AppContainer } from './App.styled';
 
@@ -12,6 +12,7 @@ const AnimatedSwitch = withRouter(({ location }) => (
       <Switch location={location}>
         <Route path="/" component={Home} exact />
         <Route path="/lecture1" component={Lecture1} />
+        <Route path="/lecture2" component={Lecture2} />
       </Switch>
     </CSSTransition>
   </TransitionGroup>

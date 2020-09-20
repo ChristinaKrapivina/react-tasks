@@ -1,13 +1,11 @@
 import React from 'react';
+// Components
+import { Navigation } from '../../components';
 // Styles
 import {
   HomeContainer,
   CircleContainer,
   WelcomeText,
-  HomeNav,
-  L1Nav,
-  L2Nav,
-  L3Nav
 } from './home.styled';
 
 const HomeComponent = () => {
@@ -15,10 +13,7 @@ const HomeComponent = () => {
     <HomeContainer>
       <CircleContainer>
         <WelcomeText>Don't you want to hover me?</WelcomeText>
-        <L1Nav to="/lecture1">lecture 1</L1Nav>
-        <L2Nav to="/lecture2">lecture 2</L2Nav>
-        <L3Nav to="/lecture3">lecture 3</L3Nav>
-        <HomeNav exact to="/">home</HomeNav>
+        <Navigation />
       </CircleContainer>
     </HomeContainer>
   );
